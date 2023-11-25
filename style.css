@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100dvh;
+  background: #313131;
+}
+
+.header {
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+.header .container {
+  width: 530px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .container button {
+  border: 0;
+  padding: 15px 20px;
+  color: white;
+  background-color: rgb(52, 52, 250);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.header .container .select {
+  color: white;
+  position: relative;
+}
+
+.template {
+  position: relative;
+  padding-top: 80px;
+}
+
+.template .text {
+  position: absolute;
+  color: white;
+  background-color: #00000063;
+  width: 500px;
+  max-width: 100%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 12px;
+  display: none;
+}
+
+.template h1 {
+  color: white;
+  background-color: #0d8a41;
+  width: 530px;
+  max-width: 100%;
+  margin: auto auto 40px auto;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 4rem;
+  border-radius: 12px;
+}
+
+.template .container {
+  background-color: #0d8a41;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-rows: repeat(3, minmax(150px, 1fr));
+  gap: 20px;
+  border-radius: 12px;
+  padding: 20px;
+  margin: auto;
+  width: fit-content;
+}
+
+.template .container div {
+  background-color: #0d8a41;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 4px 1px #000;
+  display: grid;
+  place-content: center;
+  font-size: 8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .template h1 {
+    font-size: 3rem;
+    width: 290px;
+  }
+  .template .container {
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+    grid-template-rows: repeat(3, minmax(70px, 1fr));
+  }
+
+  .template .container div {
+    font-size: 3rem;
+  }
+}
+
+/* 
+
+
+
+
+*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
